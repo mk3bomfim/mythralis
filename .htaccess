@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*)$ api.php?endpoint=$1 [QSA,L]
+RewriteRule ^surveillance_media/(.*)$ database/media_files/$1 [L]
+
+# Deny direct access to config.php
+<Files "config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
