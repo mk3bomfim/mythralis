@@ -1,0 +1,8 @@
+# Database files (created dynamically)
+database/
+gallery/database/
+
+# Logs and environment
+*.log
+.env
+.DS_Store
